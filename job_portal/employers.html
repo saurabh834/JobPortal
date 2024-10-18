@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Employers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="employers.html">Employers</a></li>
+                <li><a href="jobseekers.html">Job Seekers</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Employer Section -->
+    <section id="employerSection">
+        <h2>Create a Job</h2>
+
+        <div class="form-container">
+            <!-- Job Creation Form -->
+            <form id="jobForm">
+                <div class="form-grid">
+                    <div>
+                        <label for="jobTitle">Job Title</label>
+                        <input type="text" id="jobTitle" placeholder="e.g., Software Engineer" required>
+                    </div>
+                    <div>
+                        <label for="jobLocation">Location</label>
+                        <input type="text" id="jobLocation" placeholder="e.g., New York" required>
+                    </div>
+                    <div>
+                        <label for="jobCategory">Category</label>
+                        <input type="text" id="jobCategory" placeholder="e.g., IT, Healthcare" required>
+                    </div>
+                    <div>
+                        <label for="jobType">Job Type</label>
+                        <select id="jobType" required>
+                            <option value="Full-time">Full-time</option>
+                            <option value="Part-time">Part-time</option>
+                            <option value="Contract">Contract</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="jobDescription">Job Description</label>
+                <textarea id="jobDescription" rows="5" placeholder="Describe the job..." required></textarea>
+                <button type="submit">Create Job</button>
+            </form>
+        </div>
+
+        <!-- Job Preview Section -->
+        <section id="jobPreview" style="display:none;">
+            <h3>Job Preview</h3>
+            <div id="previewContent"></div>
+            <button onclick="submitJob()">Submit Job</button>
+        </section>
+
+        <!-- List of Created Jobs -->
+        <section id="createdJobs">
+            <h2>Your Jobs</h2>
+            <div id="jobList"></div> <!-- Dynamically populated with created jobs -->
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Admin</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="employers.html">Employers</a></li>
+                <li><a href="jobseekers.html">Job Seekers</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <section id="adminDashboard">
+        <h2>Admin Dashboard</h2>
+
+        <!-- User Management Section -->
+        <div class="dashboard-section" id="userManagement">
+            <h3>User Management</h3>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>User Type</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User data will be dynamically populated here -->
+                </tbody>
+            </table>
+            <button onclick="loadUsers()">Load Users</button>
+        </div>
+
+        <!-- Job Posting Analytics Section -->
+        <div class="dashboard-section" id="jobAnalytics">
+            <h3>Job Posting Analytics</h3>
+            <div id="analyticsStats">
+                <p>Total Jobs Created: <span id="totalJobs">0</span></p>
+                <p>Total Applicants: <span id="totalApplicants">0</span></p>
+                <p>Jobs Filled Percentage: <span id="filledPercentage">0%</span></p>
+                <p>Shortlisted vs Rejected: <span id="shortlisted">0</span> / <span id="rejected">0</span></p>
+                <button onclick="loadAnalytics()">Refresh Analytics</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
